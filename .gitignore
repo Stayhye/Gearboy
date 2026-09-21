@@ -1,13 +1,13 @@
-# Netbeans files
-dist/
-build/
-private/
-
 # Mac files
 *.DS_Store
 *.dylib
+*.app/
+platforms/macos/mcp
 
 # Visual Studio files
+.vscode/mcp.json
+.mcp.json
+.vs/
 ipch/
 [Oo]bj
 [Bb]in
@@ -34,27 +34,29 @@ ipch/
 *.ilk
 *.log
 *.zip
-*[Dd]ebug*/
+[Dd]ebug/
 *.sbr
 *.app
 Thumbs.db
 *[Rr]elease*/
+*[Pp]rofile*/
 [Tt]est[Rr]esults/
 _UpgradeReport_Files/
 _ReSharper.*/
 desktop.ini
 
 # Misc files
-*.txt
 *.ini
 *.cfg
 *.gen
-*.md
 *.bin
 *.zip
 *.gearboy
 *.so
 *.sav
+*.tmp
+*.state*
+docs/
 
 # Qt Ignores
 moc_*.cpp
@@ -63,14 +65,39 @@ qt-Release.mk
 ui_*.h
 .qmake.stash
 qrc_*.cpp
+Gearboy.pro.user.*
 
 #Xcode
 *.xcuserstate
 xcuserdata/
 *.xcexplist
 *.xcsettings
-
 *.xccheckout
 
-#rpi
+#binaries
+platforms/linux/**/gearboy
+platforms/macos/**/gearboy
 platforms/raspberry*/**/gearboy
+
+#metadata
+platforms/ios/tools/*.dat
+platforms/ios/tools/*.json
+platforms/ios/Support/ThumbnailKeys.local.xcconfig
+
+#ROMs
+*.gb
+*.gbc
+*.cgb
+*.sgb
+*.rom
+*.dmg
+
+#Switch
+*.a
+*.d
+
+#Android
+platforms/libretro/libs/
+
+#JetBrains
+.idea
